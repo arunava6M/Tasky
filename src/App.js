@@ -48,7 +48,7 @@ export default function App() {
     const count = teamsData?.length + 1
     const newBoard = {
       id: `team${count}`,
-      name:   `Enter team name`
+      name:   ''
     }
     setTeamsData(prevState => [...prevState, newBoard])
   }
@@ -76,8 +76,8 @@ export default function App() {
     const newCard = {
       id: Math.floor(Math.random() * 100),
       teamId,
-      title: "Enter a title",
-      description: "Write a description"
+      title:  '',
+      description: ''
     }
     setCardsData( prevState => [...prevState, newCard])
   }

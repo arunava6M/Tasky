@@ -66,8 +66,18 @@ const Card = ({ deleteCard, data, updateCard })=> {
       onDragOver={dragOver}
       onDragEnd={onDragEnd}
     >
-      <Header value={title} handleChange={handleChangeTitle} handleDelete={hadleDelete} />
-      <textarea className={classes.textarea} onChange={handleChangeDesc} value={description} />
+      <Header
+        value={title}
+        handleChange={handleChangeTitle}
+        handleDelete={hadleDelete}
+        placeholder="Enter name"
+      />
+      <textarea
+        className={classes.textarea}
+        onChange={handleChangeDesc}
+        value={description}
+        placeholder="Describe the task"
+        />
     </div>
   );
 };

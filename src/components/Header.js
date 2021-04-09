@@ -29,11 +29,11 @@ const useStyles = createUseStyles({
     }
 })
 
-const Header = ({ handleChange, value, handleDelete}) => {
+const Header = ({ handleChange, value, handleDelete, placeholder}) => {
    const classes = useStyles()
    return (
       <div className={classes.header}>
-        <input className={classes.input} onChange={handleChange} value={value} />
+        <input className={classes.input} placeholder={placeholder} onChange={handleChange} value={value} />
         <button className={classes.button} onClick={handleDelete} />
       </div>
    )

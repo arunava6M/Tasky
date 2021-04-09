@@ -46,7 +46,11 @@ const Board = ({ team, updateBoard, children, onDrop, deleteBoard }) => {
       onDragOver={onDragOver}
       className={classes.board}
     >
-      <Header value={name} handleChange={handleChangeTitle} handleDelete={handleDelete} />
+      <Header value={name}
+        handleChange={handleChangeTitle}
+        handleDelete={handleDelete}
+        placeholder="Enter team name"
+        />
       {children}
     </div>
   )
