@@ -10,8 +10,7 @@ const useStyles = createUseStyles({
     flexDirection: 'column',
     boxShadow: '10px -5px 81px -39px rgba(0,0,0,0.75)',
   
-    minWidth: '200px',
-    maxWidth: '300px',
+    width: '200px',
   
     backgroundColor: '#f3ecec',
   
