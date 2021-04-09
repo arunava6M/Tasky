@@ -17,6 +17,19 @@ const useStyles = createUseStyles({
     color: '#fff',
     cursor: 'pointer',
     margin: '10px'
+  },
+  flexBox: {
+    display: 'flex',
+  flexDirection: 'row',
+  justifyContent: 'flex-start',
+
+  width: '100%',
+  height: '100vh',
+
+  overflow: 'hidden',
+
+  margin: '0 auto',
+  padding: '1px'
   }
 })
 
@@ -87,17 +100,14 @@ export default function App() {
     })
   }
 
-  console.log("data:", cardsData);
-
   return (
     <div className="App">
       <button className={classes.button} onClick={addBoard}>Add Board</button>
-      <div className="flexbox">
+      <div className={classes.flexBox}>
         {teamsData.map( team => (
               <Board
                 key={team.id}
                 team={team}
-                className="board"
                 onDrop={onDrop}
                 deleteBoard={deleteBoard}
                 updateBoard={updateBoard}
@@ -111,7 +121,6 @@ export default function App() {
                       key={card.id}
                       data={card}
                       deleteCard={deleteCard}
-                      className="card"
                       updateCard={updateCard}
                     />
                   )})

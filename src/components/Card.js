@@ -48,13 +48,11 @@ const Card = ({ deleteCard, data, updateCard })=> {
 
   const handleChangeDesc = e => {
     setDescription(e.target.value)
-    // const updatedData = {...data, description }
     updateCard('description', e.target.value, data.id)
   }
 
   const handleChangeTitle = e => {
     setTitle(e.target.value)
-    // const updatedData = {...data, description }
     updateCard('title', e.target.value, data.id)
   }
 

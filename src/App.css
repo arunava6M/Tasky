@@ -15,20 +15,5 @@ body {
   background-color:#e6d6d5;
 }
 
-.flexbox {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-
-  width: 100%;
-  /* max-width: 368px; */
-  height: 100vh;
-
-  overflow: hidden;
-
-  margin: 0 auto;
-  padding: 1px;
-}
-
 
 
