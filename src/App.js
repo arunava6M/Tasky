@@ -24,9 +24,8 @@ const useStyles = createUseStyles({
   justifyContent: 'flex-start',
 
   width: '100%',
-  height: '100vh',
+  minHeight: '100vh',
 
-  overflow: 'hidden',
 
   margin: '0 auto',
   padding: '1px'
@@ -54,9 +53,6 @@ export default function App() {
   }
 
   const onDrop = (teamId, cardProps) => {
-    console.log(cardProps);
-    console.log(cardsData)
-
     if(cardProps.teamId !== teamId){
       setCardsData( prevState => [{...cardProps, teamId},
         ...prevState.filter(el => el.id !== cardProps.id)])
@@ -99,6 +95,8 @@ export default function App() {
       return prevState
     })
   }
+
+  console.log(teamsData)
 
   return (
     <div className="App">
